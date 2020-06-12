@@ -1,0 +1,17 @@
+{
+  "name": "algorithms-and-data-structures",
+  "version": "1.0.0",
+  "description": "Practice data-structures and algorithms",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "data-structures",
+    "algorithms",
+    "bigO",
+    "sorting"
+  ],
+  "author": "Leo Lopez",
+  "license": "ISC"
+}
