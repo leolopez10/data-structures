@@ -1,0 +1,23 @@
+Recursion is a PROCESS (a function in our case) that CALLS ITSELF;
+
+The call stack (is how javascript handles function calls)
+    It's a STACK data structure 
+    Any time a function is invoked it is placed (PUSHED) on the top of the call stack
+    When javascript sees the RETURN keyword or when the function ends, the compiler will remove (POP)
+
+When we use recursion we keep pushing new function onto the call stack
+
+How a recursive function works:
+    Invoke the SAME function with a different input until you reach your BASE CASE
+
+Base Case:
+    The condition when the recursion ends.
+
+Two essential parts of a recursive function
+    Base Case
+    Function call with different parameters/arguments
+
+
+WHERE THINGS GO WRONG
+    No base case
+    forgetting to return or returning the wrong thing
