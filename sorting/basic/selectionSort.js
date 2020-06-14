@@ -1,5 +1,5 @@
 // =====================
-// Multiple Pointers
+// Selection Sort
 // =====================
 
 // Similar to bubble sort, but instead of first placing large values into sorted, it places the small values into sorted position
@@ -73,3 +73,4 @@ function selectionSort(arr) {
 console.log(selectionSort(array));
 
 // TIME COMPLEXITY O(n^2)
+// SPACE COMPLEXITY O(1)

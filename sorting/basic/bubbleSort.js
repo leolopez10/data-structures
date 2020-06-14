@@ -68,4 +68,5 @@ function bubbleSort(arr) {
 console.log(bubbleSort(array));
 
 // TIME COMPLEXITY O(n)
+// SPACE COMPLEXITY O(1)
 // Method is good candidate if the data is slightly sorted
