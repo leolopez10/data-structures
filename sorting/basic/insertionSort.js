@@ -29,6 +29,6 @@ function insertionSort(arr) {
 
 console.log(insertionSort(array));
 
-// TIME COMPLEXITY O(n)
+// TIME COMPLEXITY O(n^2)
 // SPACE COMPLEXITY O(1)
 // If we keep on side sorted, it works well if you're taking in live data.
