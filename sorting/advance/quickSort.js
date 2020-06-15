@@ -53,3 +53,6 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
 }
 
 console.log(quickSort(array));
+
+// TIME COMPLEXITY - O(n^2)
+// SPACE COMPLEXITY - O(log n)
