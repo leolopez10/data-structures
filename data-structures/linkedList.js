@@ -1,22 +1,33 @@
-// =====================
+// ======================================================================
 // Singly Linked List
-// =====================
+// ======================================================================
 
 // A data structure that contains a HEAD, TAIL, and LENGTH property
 // Linked Lists consist of nodes, and each NODE has VALUE and a POINTER to another node or null
+// Singly Linked Lists are excellent alternatives to arrays when insertion and deletion at the beginning are frequently required
+// Arrays contain a built in index whereas Linked LIsts do not
+// The idea of a list data structure that consists of nodes is the foundation for other data structures like Stacks and Queues
 
-// ====================================
+// ======================================================================
 // Comparisons with Arrays
 // Lists
 // // Do not have indexes!
 // // Connected via nodes with a NEXT pointer
 // // Random Access is not allowed
-//
+// ================================================
 // Arrays
 // // Indexed in order!
 // // Insertion and deletion can be expensive
 // // Can quickly be accessed at a specific index
-// ====================================
+// ======================================================================
+
+// ======================================================================
+// BIG O
+// Insertion = O(1)
+// Removal = O(1) or O(n)
+// Searching = O(n)
+// Access = O(n)
+// ======================================================================
 
 // ======================================================================
 // Code
@@ -153,7 +164,7 @@ class SinglyLinkedList {
 
   // INSERT - Adding a node to the linked list at a SPECIFIC position
   // If the index is less than zero or greater than the length, return false
-  // if the index is the same as the length, push a new node to the nedn of the list
+  // if the index is the same as the length, push a new node to the end of the list
   // If the index is zero, unshift a new node to the start of the list.
   // Otherwise, using the GET method, access the node at the index -1
   // Set the next property of that node to be the new node
@@ -181,7 +192,6 @@ class SinglyLinkedList {
   // Set the next property on that node to be the next of th next node
   // Decrement the length
   // Return the value of the node removed
-
   remove(index) {
     if (index < 0 || index >= this.length) return undefined;
     if (index === 0) return this.shift();
@@ -204,7 +214,6 @@ class SinglyLinkedList {
   // Set next to be the next property on whatever prev is
   // Set prev to be the value of the node variable
   // Set the node variable to be the value of the next variable
-
   reverse() {
     let node = this.head;
     this.head = this.tail;
