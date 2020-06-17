@@ -59,6 +59,9 @@ BINARY HEAPS
 
 - Binary heaps are used to implement Priority Queues, which are VERY commonly used data structures
 - They are also used quite a bit, with GRAPH TRAVERSAL algorithms
+- Binary Heaps are very useful data structures for sorting, and implementing other data structures like priority queues
+- Binary Heaps are either MaxBinaryHeaps or MinBinaryHeaps with parents either being smaller or larger than their children
+- With just a little bit of math, we can represent heaps using arrays
 
 - MAX heap
     - Very similar to binary search tree, but with some different rules (no order to the tree)
@@ -68,6 +71,10 @@ BINARY HEAPS
     - A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first.
 - MIN heap
     - In a MinBinaryHeap, parent nodes are always smaller than child nodes
+=========================================================================
 
+=========================================================================
+PRIORITY QUEUE
 
-  
+- A data structure where each element has a priority. Elements with higher priorities are served before elements with lower priorities
+=========================================================================
