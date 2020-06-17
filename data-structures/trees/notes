@@ -131,3 +131,19 @@ ADJACENCY MATRIX
 -- Slower to iterate over all edges
 - Faster to look up specific edge
 =========================================================================
+
+=========================================================================
+TRAVERSING A GRAPH
+
+- Visiting/Updating/Checking each vertex in a graph
+
+USES
+
+- Peer to peer networking
+- Web Crawlers
+- Finding "closest" matches/recommendations
+- Shortest path problems
+    - GPS Navigation
+    - Salving mazes
+    - AI(shortest path to win the game)
+=========================================================================
