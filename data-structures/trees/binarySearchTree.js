@@ -97,7 +97,7 @@ class BinarySearchTree {
   //            - If there is not, we're done searching!
   find(value) {
     if (this.root === null) return false;
-    var current = this.root,
+    let current = this.root,
       found = false;
     while (current && !found) {
       if (value < current.value) {
@@ -114,7 +114,7 @@ class BinarySearchTree {
 
   contains(value) {
     if (this.root === null) return false;
-    var current = this.root,
+    let current = this.root,
       found = false;
     while (current && !found) {
       if (value < current.value) {
@@ -127,11 +127,99 @@ class BinarySearchTree {
     }
     return false;
   }
+
+  // Breadth First Search
+  // Create a queue (this can be ann array) and a variable to store the values of nodes visited
+  // Place the root node in the queue
+  // Loop as long as there is anything in the queue
+  //  - Dequeue a node from the queue and push the value of the node into the variable tha stores the nodes
+  //  - If there is  left property on the node dequeued - add it to the queue
+  //  - If there is a right property on then ode dequeued - add it to the queue
+  // Return the variable that stores the values
+  BFS() {
+    let node = this.root;
+    let data = [];
+    let queue = [];
+    queue.push(node);
+
+    while (queue.length) {
+      node = queue.shift();
+      data.push(node.value); // tpicallu just the node (only doing value to check )
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return data;
+  }
+
+  // Depth First Search PreOrder
+  // Create a variable to store the values of nodes visited
+  // Store the root of the BST in a variable called current
+  // Write a helper function which accepts a node
+  // - Push the value of the node to the variable that stores the values
+  // - If the node has a left property , call the helper function with the left property on the node
+  // - If the node has a right property, call the helper function with the right property on the node
+  // Invoke the helper function with the current variable
+  DFSPreOrder() {
+    let data = [];
+    function traverse(node) {
+      data.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return data;
+  }
+
+  // Depth First Search PostOrder
+  // Create variable to store the values of nodes visited
+  // Store the root of the BSY in a variable called current
+  // Wright a helper function which accepts a node
+  //  - If the node has left property, call the helper function with the left property on the node
+  //  - If the node has a right property, call the helper function with the right property on the node
+  //  - Push the value of the node to the variable that stores the values
+  //  - Invoke the helper function with the current variable
+  // Return the array of values
+  DFSPostOrder() {
+    let data = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      data.push(node.value);
+    }
+    traverse(this.root);
+    return data;
+  }
+
+  // Depth First Search InOrder
+  // Create a variable to store the values of nodes visited
+  // Store the root of the BST in a variable called current
+  // Write a helper function which accepts a node
+  //  - If the node has a left property, call the helper function with the left property on the node
+  //  - push the value of the node to the variable that stores the values
+  //  - If the node has a right property, call the helper function with the right property, call the helper function with the right property on the node
+  // Invoke the helper function with the current variable
+  // Return the array of values
+  DFSInOrder() {
+    let data = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      data.push(node.value);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return data;
+  }
 }
 
 const tree = new BinarySearchTree();
-// tree.root = new Node(10);
-// tree.root.right = new Node(15);
-// tree.root.left = new Node(7);
-// tree.root.left.right = new Node(9);
+tree.insert(10);
+tree.insert(6);
+tree.insert(15);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
 console.log(tree);
+console.log(tree.BFS());
+console.log(tree.DFSPreOrder());
+console.log(tree.DFSPostOrder());
+console.log(tree.DFSInOrder());

@@ -28,9 +28,46 @@ Tree real world concept
     - Decision Tree AI
     - Folder in others
     - computer file system
-
+=========================================================================
 Binary Search Tree
     - Every parent node has at most TWO children
     - Every node to the LEFT of a parent node is ALWAYS LESS than the parent node
     - Every node to the RIGHT of a parent node is ALWAYS GREATER than the parent node
+
+Transverse a tree = hit every node on the tree
+    - Breadth-first Search (head from left to right (work horizontal))
+    - Depth-first search (Moves down the tree)
+        - InOrder: 3,6,7,8,10
+        - PreOrder: Go down left then right
+        - PostOrder: start from the bottom and move up
+
+BREADTH FIRST
+    - lots of nodes to keep track of (on a wide tree)
+    - fewer nodes to keep track of (on narrow tree)
+
+DEPTH FIRST
+    - Fewer nodes to keep track of (on a wide tree)
+    - lots of nodes to keep track of (on a narrow tree)
+InOrder
+    - Used commonly with BST's Notice we get all nodes in the tree in their underlying order
+PreOrder
+    - Can be used to "export" a tree structure so that it is easily reconstructed or copied
+=========================================================================
+
+=========================================================================
+BINARY HEAPS
+
+- Binary heaps are used to implement Priority Queues, which are VERY commonly used data structures
+- They are also used quite a bit, with GRAPH TRAVERSAL algorithms
+
+- MAX heap
+    - Very similar to binary search tree, but with some different rules (no order to the tree)
+    - In a MaxBinaryHeap, parent nodes are always larger than child nodes.
+    - Each parent has at most two child nodes
+    - The value of each parent node is ALWAYS greater than its child nodes
+    - A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first.
+- MIN heap
+    - In a MinBinaryHeap, parent nodes are always smaller than child nodes
+
+
   
