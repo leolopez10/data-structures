@@ -147,3 +147,18 @@ USES
     - Salving mazes
     - AI(shortest path to win the game)
 =========================================================================
+
+=========================================================================
+DIJKSTRA'S ALGORITHM
+
+- One of the most famous and widely used algorithms around
+- Finding the shortest path 
+
+USES
+
+- GPS finding the fastest route
+- Network Routing - finds open shortest path for data
+- Biology - used to model the spread of virus among humans
+- Airline tickets - finding cheapest route
+- Many more
+=========================================================================
